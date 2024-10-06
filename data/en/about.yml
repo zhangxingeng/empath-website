@@ -1,16 +1,15 @@
 ############################# About ###################################
 about:
   enable : true
-  title : About Us
+  title : What We Do
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
+    title : Context-based AI solutions
+    content : We apply publicly available data of prospective jurors to the context of your case. This way, you can better understand how a juror may view your case.
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Actionable insights
+    content : Get an understanding of the attitudes and experiences of each prospective juror which may affect their judgment.
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Ease of use
+    content : Don't worry! You don't need to be a computer geek to use our product! Even the most tech-averse lawyers can use our product.

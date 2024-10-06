@@ -1,0 +1,9 @@
+{
+    "search.exclude": {
+      "**/theme": true
+    },
+    "files.exclude": {
+      "**/theme": true
+    }
+  }
+  

@@ -3,25 +3,24 @@ feature:
   enable : true
   image : images/about/about-business-man.jpg
   image_webp : images/about/about-business-man.webp
-  title : We’re A Digital Design Agency.
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi."
+  title : Jury research begins with us.
+  content : "Leverage the power of AI to gain better insights with less effort."
   feature_item : 
       # feature item loop
-    - title : SEO Optimized
+    - title : Gain insights that matter
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Turn raw data into actionable insights. Traditional jury research requires the lawyer to review the information and determine whether it is important or meaningful.
       
       # feature item loop
-    - title : Easy Customization
+    - title : Free up your time
       icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
-
+      content : Leverage the power of AI to gather and interpret relevant data.
       # feature item loop
-    - title : SEO Optimized
+    - title : Be prepared for jury selection
       icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Know what questions to ask which jurors.
       
       # feature item loop
-    - title : Easy Customization
+    - title : Reveal juror biases
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : This product helps lawyers determine whether a prospective juror may have an actual bias that will keep them from rendering a fair and impartial decision.
