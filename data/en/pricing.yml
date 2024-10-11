@@ -4,9 +4,9 @@ pricing:
   title : Our Plans
   pricing_table :
     # pricing table loop
-    - name : Free
-      price : $99
-      unit : month
+    - name : 1-50 requested profiles
+      price : $85
+      unit : profile
       services:
         - 1GB Disk Space
         - 10 Email Account
@@ -19,9 +19,9 @@ pricing:
         link : "#"
       
     # pricing table loop
-    - name : Silver
-      price : $149
-      unit : month
+    - name : 51-100 requested profiles 
+      price : $75
+      unit : profile 
       services:
         - 1GB Disk Space
         - 10 Email Account
@@ -34,9 +34,9 @@ pricing:
         link : "#"
         
     # pricing table loop
-    - name : Gold
-      price : $199
-      unit : month
+    - name : 101+ requested profiles
+      price : $60
+      unit : profile 
       services:
         - 1GB Disk Space
         - 10 Email Account

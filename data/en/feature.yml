@@ -8,19 +8,19 @@ feature:
   feature_item : 
       # feature item loop
     - title : Gain insights that matter
-      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      icon : ti-light-bulb # themify icon pack : https://themify.me/themify-icons
       content : Turn raw data into actionable insights. Traditional jury research requires the lawyer to review the information and determine whether it is important or meaningful.
       
       # feature item loop
     - title : Free up your time
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      icon : ti-alarm-clock # themify icon pack : https://themify.me/themify-icons
       content : Leave the gathering, researching, and interpretation of juror information to us -- and spend your time preparing the finer points of your case.
       # feature item loop
-    - title : Look and feel like the most prepared lawyer in the room
-      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
+    - title : Be the most prepared lawyer in the room
+      icon : ti-briefcase # themify icon pack : https://themify.me/themify-icons
       content : Show up to voire dire with confidence leveraged by the power of AI.
       
       # feature item loop
     - title : Gauge perspectives of prospective jurors
-      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
       content : Determine the risk that a prospective juror may have an actual bias against your client.
