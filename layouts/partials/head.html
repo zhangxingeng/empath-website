@@ -26,8 +26,11 @@
   <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
 
 	{{ "<!--Favicon-->" | safeHTML }}
-	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="icon" type="image/png" href="{{ `/images/icons/favicon-48x48.png` | absURL }}" sizes="48x48" />
+	<link rel="icon" type="image/svg+xml" href="{{ `/images/icons/favicon.svg` | absURL }}" />
+	<link rel="shortcut icon" href="{{ `/images/icons/favicon.ico` | absURL }}" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ `/images/icons/apple-touch-icon.png` | absURL }}" />
+	<link rel="manifest" href="{{ `/images/icons/site.webmanifest` | absURL }}" />
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
