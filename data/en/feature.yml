@@ -7,9 +7,14 @@ feature:
   content : "Leverage the power of AI to gain better insights with less effort."
   feature_item : 
       # feature item loop
-    - title : Gain insights that matter
+    - title : Think inside the (jury) box
       icon : ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      content : Turn raw data into actionable insights. Traditional jury research requires the lawyer to review the information and determine whether it is important or meaningful.
+      content : Understand the social dynamics of how a prospective juror may interact with the rest of the jury panel. 
+      
+       # feature item loop
+    - title : Gauge perspectives of prospective jurors
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      content : Determine the risk that a prospective juror may have an actual bias against your client.
       
       # feature item loop
     - title : Free up your time
@@ -18,9 +23,4 @@ feature:
       # feature item loop
     - title : Be the most prepared lawyer in the room
       icon : ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      content : Show up to voire dire with confidence leveraged by the power of AI.
-      
-      # feature item loop
-    - title : Gauge perspectives of prospective jurors
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Determine the risk that a prospective juror may have an actual bias against your client.
+      content : Show up to voire dire with confidence leveraged by AI.
