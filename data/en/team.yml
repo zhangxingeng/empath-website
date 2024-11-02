@@ -5,8 +5,7 @@ team:
   team_member :
     # team member loop
     - name : Grant Schexnailder
-      image_webp : images/team/team-1.webp
-      image : images/team/team-1.jpg
+      image : images/team/grant.jpeg
       designation : President/Founder
       content :  Grant is a licensed Louisiana lawyer and a graduate of Southern University Law Center. Since graduating from SULC, Grant has practiced in Lafayette, LA. His practice remains in municipal defense litigation, whereby he represents cities and towns throughout the state of Louisiana. Grant is a recipient of the 2023 Louisiana Bar Association Top 40 Under 40 award.  
       social :
@@ -20,11 +19,10 @@ team:
           link : "#"
         
     # team member loop
-    - name : Shane Zhang
-      image_webp : images/team/team-2.webp
-      image : images/team/team-2.jpg
+    - name : Shane (Xingeng) Zhang
+      image : images/team/shane.jpeg
       designation : CEO/ Founder
-      content : Shane is an AI engineer holding a Masters degree in Computer Science from Rutgers University. Outside of work, Shane enjoys scuba diving and reading books related to cognitive science, sociology, and philosophy.
+      content : Shane is an AI engineer with over 5 years of experience in Generative AI. He is a graduate of Rutgers University and holds a Masters degree in Computer Science - Machine Learning.Shane has successfully designed and implemented advanced Generative AI solutions, notably enhancing performance and scalability in production environments at Citigroup Inc. 
       social :
         - icon : ti-user # themify icon pack : https://themify.me/themify-icons
           link : "https://www.shanechang.com/"

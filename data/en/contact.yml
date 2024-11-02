@@ -3,7 +3,9 @@ contact:
   enable : true
   title : Contact Us
   subtitle : Contact Details
-  content : If you are interested in our service and want to request a demo, feel free to sumbit the form to the right.
+  content : |
+    Contact us today for a quote, with packages starting at $5,050.<br />
+    Feel free to request for a demo.
 
   # Contact details
   contact_list:

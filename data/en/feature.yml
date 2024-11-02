@@ -1,8 +1,7 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/about-business-man.jpg
-  image_webp : images/about/about-business-man.webp
+  image : images/about/about.png
   title : Jury research begins with us.
   content : "Leverage the power of AI to gain better insights with less effort."
   feature_item : 
