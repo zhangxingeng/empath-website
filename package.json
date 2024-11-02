@@ -7,7 +7,7 @@
     "dev": "hugo server",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
     "test": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
-    "project-setup": "node ./scripts/projectSetup.js",
-    "theme-setup": "node ./scripts/themeSetup.js"
+    "project-setup": "node ./themes/meghna-hugo/scripts/projectSetup.js",
+    "theme-setup": "node ./themes/meghna-hugo/scripts/themeSetup.js"
   }
 }
