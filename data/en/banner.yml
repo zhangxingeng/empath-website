@@ -8,4 +8,4 @@ banner:
   button:
     enable : true
     label : "Get in touch!"
-    link : "#services"
+    link : "#contact"

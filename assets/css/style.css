@@ -106,22 +106,23 @@ a:hover {
 }
 
 .btn:focus {
-  color: #ddd;
+  color:rgba(0, 0, 0, 0.7);
 }
 
 .btn-transparent {
-  border: 1px solid #4e595f;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: rgba(29, 32, 36, 0.7);
 }
 
 .btn-transparent:hover,
 .btn-transparent:focus {
-  background-color: #ffffff;
+  background-color: rgba(22, 24, 25, 0.9);
   border: 1px solid transparent;
   color: #fff;
 }
 
 .border-meghna {
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
+  border-top: 2px solid rgba(29, 32, 36, 0.7);
   height: 1px;
   margin: 15px auto 0;
   position: relative;
