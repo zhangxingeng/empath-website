@@ -7,5 +7,4 @@ cta:
   content : ""
   button:
     enable : true
-    label : "Schedule a Demo"
     link : "#contact"
