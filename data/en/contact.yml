@@ -2,10 +2,9 @@
 contact:
   enable : true
   title : Contact Us
-  subtitle : Contact Details
+  subtitle : Join Our Waitlist
   content : |
-    Contact us today for a quote, with packages starting at $5,050.<br />
-    Feel free to request for a demo.
+    Our juror insights tool is coming soon. Join the waitlist to stay updated and be notified when it's available!
 
   # Contact details
   contact_list:
