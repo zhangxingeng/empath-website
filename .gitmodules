@@ -1,4 +1,4 @@
 [submodule "themes/meghna-hugo"]
 	path = themes/meghna-hugo
-	url = https://github.com/themefisher/meghna-hugo.git
+	url = https://github.com/zhangxingeng/meghna-hugo-empath.git
 	ignore = all

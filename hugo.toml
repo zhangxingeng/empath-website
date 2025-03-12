@@ -250,7 +250,7 @@ contentDir = "content/english"
 [Languages.en.params]
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; 2024 Empath Legal LLC"
+copyright = "Copyright &copy; 2025 Empath Legal LLC"
 
 ################################ France Language ########################
 [Languages.fr]
@@ -261,4 +261,4 @@ weight = 2
 
 [Languages.fr.params]
 home = "Accueil"
-copyright = "Copyright &copy; 2024 Empath Legal LLC"
+copyright = "Copyright &copy; 2025 Empath Legal LLC"
