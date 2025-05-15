@@ -1,21 +1,21 @@
 ############################## Contact #############################
 contact:
   enable : true
-  title : Contact Us
-  subtitle : Join Our Waitlist
+  title : Get Started
+  subtitle : Join Our Early Access Program
   content : |
-    Our juror insights tool is coming soon. Join the waitlist to stay updated and be notified when it's available!
+    Be among the first to experience our game-changing juror insights platform. Join our early access program to receive priority onboarding, personalized support, and special introductory pricing.
 
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Broussard, LA, US"
+      info : "Broussard, LA, United States"
       
     # - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
     #   info : "Phone: +880-31-000-000"
 
     - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      info : "Email: empathlegal@gmail.com"
+      info : "Email: contact@empathlegal.com"
 
 
   # Contact form
@@ -24,6 +24,6 @@ contact:
     form_action : "https://formspree.io/f/mdkeoppa" #contact form works with https://formspree.io
     name : "Your Name"
     email : "Your Email"
-    subject : "Subject"
-    message : "Message"
-    submit : "Submit"
+    subject : "Area of Practice"
+    message : "How can Empath Legal help you?"
+    submit : "Request Early Access"

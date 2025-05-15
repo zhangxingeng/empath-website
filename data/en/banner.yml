@@ -4,8 +4,11 @@ banner:
   bg_image : "images/backgrounds/hero.png"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "Empath Legal"
-  content : " Know Your Jurors"
-  button:
-    enable : true
-    label : "Get in touch!"
-    link : "#contact"
+  content : "AI-Powered Juror Insights | Make Informed Decisions in the Courtroom"
+  buttons:
+    - label : "See How It Works"
+      link : "#demo"
+      class : "btn-transparent"
+    - label : "Try Our Demo"
+      link : "https://juror.empathlegal.com"
+      class : "btn-main"

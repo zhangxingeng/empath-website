@@ -1,14 +1,14 @@
 ############################# About ###################################
 about:
   enable : true
-  title : What We Do
+  title : Our Mission
   about_item :
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : Context-based AI solutions
-    content : We apply publicly available data of prospective jurors to the context of your case. This way, you can better understand how a juror may view your case.
+    title : Intelligent Juror Analysis
+    content : We leverage AI to analyze publicly available data about prospective jurors within the context of your specific case, providing you with deeper insights into how jurors may perceive your arguments.
   - icon : ti-dashboard # themify icon pack : https://themify.me/themify-icons
-    title : Actionable insights
-    content : Get an understanding of the attitudes and experiences of each prospective juror.
-  - icon : ti-face-smile # themify icon pack : https://themify.me/themify-icons
-    title : Ease of use
-    content : Don't worry! You don't need to be a computer geek to use our product! Even the most tech-averse lawyers can use our product. This product is made for lawyers, by lawyers.
+    title : Strategic Decision Making
+    content : Our platform transforms raw data into clear, actionable insights about each juror's attitudes, experiences, and potential biases, helping you make strategic decisions during jury selection.
+  - icon : ti-shield # themify icon pack : https://themify.me/themify-icons
+    title : Designed For Legal Professionals
+    content : Built by lawyers for lawyers, our intuitive platform requires no technical expertise. We've prioritized ease of use so you can focus on what matters most - building your strongest case.

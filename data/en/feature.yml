@@ -2,24 +2,25 @@
 feature:
   enable : true
   image : images/about/about.webp
-  title : Jury research begins with us.
-  content : "Leverage the power of AI to gain better insights with less effort."
+  title : Transform Your Jury Selection Process
+  content : "Our AI-driven platform delivers powerful insights to help you build the most favorable jury for your case."
   feature_item : 
       # feature item loop
-    - title : Gain insights that matter
-      icon : ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      content : Turn raw data into actionable insights. Traditional jury research requires the lawyer to review the information and determine whether it is important or meaningful.
+    - title : Comprehensive Juror Profiles
+      icon : ti-user # themify icon pack : https://themify.me/themify-icons
+      content : Our system synthesizes available public data to create comprehensive profiles that highlight key factors relevant to your case.
       
       # feature item loop
-    - title : Free up your time
-      icon : ti-alarm-clock # themify icon pack : https://themify.me/themify-icons
-      content : Leave the gathering, researching, and interpretation of juror information to us -- and spend your time preparing the finer points of your case.
-      # feature item loop
-    - title : Be the most prepared lawyer in the room
-      icon : ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      content : Show up to voire dire with confidence leveraged by the power of AI.
+    - title : Time-Saving Automation
+      icon : ti-time # themify icon pack : https://themify.me/themify-icons
+      content : Focus on case preparation while our AI handles the gathering, analysis, and interpretation of juror information, saving you countless hours of research.
       
       # feature item loop
-    - title : Gauge perspectives of prospective jurors
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Determine the risk that a prospective juror may have an actual bias against your client.
+    - title : Strategic Advantage
+      icon : ti-crown # themify icon pack : https://themify.me/themify-icons
+      content : Enter the courtroom with confidence backed by data-driven insights that your opposition may not have access to.
+      
+      # feature item loop
+    - title : Bias Identification
+      icon : ti-eye # themify icon pack : https://themify.me/themify-icons
+      content : Quickly identify potential biases that could impact how jurors perceive the facts of your case, allowing for more informed jury selection decisions.

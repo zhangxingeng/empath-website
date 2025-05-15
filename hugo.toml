@@ -12,10 +12,9 @@ summaryLength = 15 # see https://gohugo.io/content-management/excerpts/
 # google analytics
 googleAnalytics = "G-CFEY06D568" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 # disqus short name
-disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+disqusShortname = "" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 # disable language
-disableLanguages = [
-] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
+disableLanguages = ["fr"] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
 
 ############################# Build ##############################
@@ -71,7 +70,7 @@ link = "plugins/magnific-popup/magnific-popup.css"
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
 [[params.plugins.css]]
-link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
+link = "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700&display=swap"
 
 # js plugins
 [[params.plugins.js]]
@@ -97,7 +96,7 @@ url = "#about"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "Feature"
+name = "Features"
 url = "#feature"
 weight = 3
 
@@ -107,107 +106,53 @@ url = "#team"
 weight = 4
 
 [[Languages.en.menu.main]]
-name = "contact"
+name = "Contact"
 url = "#contact"
 weight = 5
-
-
-# [[Languages.en.menu.main]]
-# name = "Dropdown"
-# weight = 7
-# hasChildren = true
-
-# [[Languages.en.menu.main]]
-# parent = "Dropdown"
-# name = "Dropdown 1"
-# url = "#"
-# weight = 1
-
-# [[Languages.en.menu.main]]
-# parent = "Dropdown"
-# name = "Dropdown 2"
-# url = "#"
-# weight = 2
-
-# [[Languages.en.menu.main]]
-# name = "themefisher"
-# url = "https://themefisher.com/"
-# weight = 8
-
 
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo.png"
 # Meta data
-description = "Responsive Multipurpose Parallax Hugo Template"
-author = "Themefisher"
+description = "AI-powered juror insights for legal professionals"
+author = "Empath Legal"
 # Google Analytics
-google_analytics_id = "" # Your ID
+google_analytics_id = "G-CFEY06D568" # Your ID
 # post share
 post_share = true
 
 # preloader
 [params.preloader]
-enable = false
+enable = true
 preloader = "images/logo.png"
 
 # cookies
 [params.cookies]
-enable = false
-expire_days = 2
+enable = true
+expire_days = 30
 
 # google map
 [params.map]
 enable = false
-gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
 map_latitude = "51.5223477"
 map_longitude = "-0.1622023"
 map_marker = "images/marker.png"
 
 ############################# social icons ##########################
 [[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "https://linkedin.com/company/empath-legal"
 
 [[params.social]]
 icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
+link = "https://twitter.com/empathlegal"
 
 ################################ English Language ########################
 [Languages.en]
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
-
-[Languages.en.params]
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; 2025 Empath Legal LLC"
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-
-[Languages.fr.params]
-home = "Accueil"
-copyright = "Copyright &copy; 2025 Empath Legal LLC"
+copyright = "Copyright &copy; 2024 Empath Legal LLC"
