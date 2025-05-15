@@ -156,3 +156,19 @@ contentDir = "content/english"
 weight = 1
 home = "Home"
 copyright = "Copyright &copy; 2024 Empath Legal LLC"
+
+# OpenGraph / Social Media sharing
+[params.opengraph]
+title = "Empath Legal - AI-powered Juror Insights"
+description = "AI-powered juror insights for legal professionals"
+url = "https://empathlegal.com"
+    [params.opengraph.twitter]
+        site = "empathlegal"
+        card = "summary_large_image"
+
+# Default images if page doesn't specify one
+[params.defaultImage]
+    [params.defaultImage.opengraph]
+        enabled = true
+        local = true
+        src = "images/backgrounds/hero-background.jpg"
