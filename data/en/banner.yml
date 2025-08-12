@@ -9,6 +9,6 @@ banner:
     - label : "See How It Works"
       link : "#demo"
       class : "btn-transparent"
-    - label : "Try Our Demo"
+    - label : "Try Our Product"
       link : "https://juror.empathlegal.com"
       class : "btn-main"
