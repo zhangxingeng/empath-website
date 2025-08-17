@@ -1,0 +1,9 @@
+{{ if site.Params.preloader.enable }}
+{{ "<!-- preloader start -->" | safeHTML }}
+<div id="preloader" class="fixed inset-0 bg-slate-900 dark:bg-slate-950 flex items-center justify-center z-[9999] transition-opacity duration-300">
+  {{ with site.Params.preloader.preloader }}
+  <img src="{{ . | absURL }}" alt="Loading..." class="w-20 h-20 object-contain animate-pulse">
+  {{ end }}
+</div>
+{{ "<!-- preloader end -->" | safeHTML }}
+{{ end }}

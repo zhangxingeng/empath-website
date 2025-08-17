@@ -1,8 +1,10 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = "pnpm install && pnpm build"
 
 [build.environment]
-HUGO_VERSION = "0.145.0"
+HUGO_VERSION = "0.148.2"
 GO_VERSION = "1.23.2"
+NODE_VERSION = "22"
+NPM_FLAGS = "--version"
 HUGO_BASEURL = "https://www.empathlegal.com"

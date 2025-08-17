@@ -1,0 +1,21 @@
+{{/* 
+  Enhanced image.html partial for better responsive image handling and SEO
+*/}}
+
+{{ $src := .Src }}
+{{ $alt := .Alt }}
+{{ $class := .Class }}
+{{ $loading := default "lazy" .Loading }}
+
+{{ if $src }}
+<img 
+  src="{{ $src | absURL }}" 
+  data-src="{{ $src | absURL }}" 
+  alt="{{ $alt }}" 
+  class="{{ $class }}" 
+  loading="{{ $loading }}"
+  {{ if not (in $class "d-none") }}
+  itemprop="image"
+  {{ end }}
+>
+{{ end }} 

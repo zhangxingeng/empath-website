@@ -14,6 +14,8 @@
         "ms-toolsai.vscode-jupyter-slideshow",
         "mushan.vscode-paste-image",
         "tamasfe.even-better-toml",
-        "wholroyd.jinja"
+        "wholroyd.jinja",
+        "budparr.language-hugo-vscode",
+        "tamasfe.even-better-toml"
     ]
 }

@@ -1,0 +1,19 @@
+<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+  <div class="post-block">
+    <div class="media-wrapper">
+      {{ if .Params.Image_webp }}
+        {{ partial "image.html" (dict "Src" .Params.Image_webp "Alt" .Title "Class" "img-fluid lozad") }}
+      {{ else if .Params.Image }}
+        {{ partial "image.html" (dict "Src" .Params.Image "Alt" .Title "Class" "img-fluid lozad") }}
+      {{ else }}
+        {{ partial "image.html" (dict "Src" "images/favicon.png" "Alt" .Title "Class" "img-fluid lozad") }}
+      {{ end }}
+    </div>
+
+    <div class="content">
+      <h3><a href="{{ .Permalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h3>
+      <p>{{ .Summary }}</p>
+      <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
+    </div>
+  </div>
+</article>

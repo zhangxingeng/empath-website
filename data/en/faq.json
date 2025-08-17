@@ -1,0 +1,35 @@
+{
+  "page_title": "Frequently Asked Questions",
+  "page_description": "Data Security & Privacy",
+  "categories": [
+    {
+      "category": "Data Security & Privacy",
+      "faqs": [
+        {
+          "question": "Who owns the data uploaded to your system?",
+          "answer": "All data belongs to the client. We do not claim ownership of any documents, files, or information provided by clients."
+        },
+        {
+          "question": "Do you use client data to train artificial intelligence models?",
+          "answer": "No. We do not use client data for training, research, or any purpose outside of providing the service."
+        },
+        {
+          "question": "What happens when a client deletes data?",
+          "answer": "When data is deleted, it is permanently removed from our system. We do not keep hidden copies or backups of deleted material."
+        },
+        {
+          "question": "Do you share client data with third parties?",
+          "answer": "No. Client data is not sold, rented, or shared with any third party."
+        },
+        {
+          "question": "Do you keep records of client files or monitor their contents?",
+          "answer": "No. We do not keep logs or records of the contents of client files. Our system only keeps technical information necessary to keep the service running, but never the client's case materials."
+        },
+        {
+          "question": "How do you protect sensitive information?",
+          "answer": "All communication with our system is protected. Files are stored securely and are not accessible to outside parties. We regularly update our systems to maintain security."
+        }
+      ]
+    }
+  ]
+}

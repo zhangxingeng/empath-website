@@ -1,0 +1,108 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<section class="section py-20 bg-slate-50 dark:bg-slate-900">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      {{"<!-- Page Header -->" | safeHTML}}
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white mb-4">
+          {{ .Title }}
+        </h1>
+        <div class="mx-auto h-1 w-16 bg-primary rounded mb-6"></div>
+        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          {{ .Params.description }}
+        </p>
+        {{ if .Params.last_updated }}
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-6">
+          Last updated: {{ dateFormat "January 2, 2006" .Params.last_updated }}
+        </p>
+        {{ end }}
+      </div>
+      
+      {{"<!-- Content -->" | safeHTML}}
+      <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 p-8 md:p-12">
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none">
+          <style>
+            .prose h2 {
+              color: var(--tw-prose-headings);
+              font-weight: 700;
+              margin-top: 2em;
+              margin-bottom: 1em;
+              border-bottom: 2px solid #e2e8f0;
+              padding-bottom: 0.5em;
+            }
+            
+            .dark .prose h2 {
+              border-bottom-color: #475569;
+            }
+            
+            .prose h3 {
+              color: var(--tw-prose-headings);
+              font-weight: 600;
+              margin-top: 1.6em;
+              margin-bottom: 0.6em;
+            }
+            
+            .prose p {
+              margin-bottom: 1em;
+              line-height: 1.7;
+            }
+            
+            .prose ul, .prose ol {
+              margin-bottom: 1.25em;
+            }
+            
+            .prose li {
+              margin-bottom: 0.5em;
+            }
+            
+            .prose strong {
+              color: var(--tw-prose-bold);
+              font-weight: 600;
+            }
+            
+            .prose a {
+              color: #2563eb;
+              text-decoration: underline;
+              text-decoration-color: transparent;
+              transition: all 0.2s ease;
+            }
+            
+            .prose a:hover {
+              color: #1d4ed8;
+              text-decoration-color: currentColor;
+            }
+            
+            .dark .prose a {
+              color: #60a5fa;
+            }
+            
+            .dark .prose a:hover {
+              color: #3b82f6;
+            }
+          </style>
+          {{ .Content }}
+        </div>
+      </div>
+      
+      {{"<!-- Contact CTA -->" | safeHTML}}
+      <div class="mt-12 text-center">
+        <div class="bg-primary/5 dark:bg-primary/10 rounded-lg p-8 border border-primary/20">
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+            Questions about our data security practices?
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Our security team is available to address any concerns or provide additional information.
+          </p>
+          <a href="mailto:security@empathlegal.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-200">
+            Contact Security Team
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

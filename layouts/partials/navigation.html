@@ -1,0 +1,44 @@
+<header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-white/10">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between py-4">
+      <a class="inline-flex items-center gap-3" href="{{ .Site.BaseURL | relLangURL }}">
+        {{ if site.Params.logo }}
+        <img class="lozad h-12 w-auto dark:hidden" data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}">
+        <img class="lozad h-12 w-auto hidden dark:block" data-src="{{ site.Params.logo_dark | absURL }}" alt="{{ .Site.Title }}">
+        {{ end }}
+        <span class="font-serif text-2xl font-semibold text-slate-900 dark:text-white">{{ .Site.Title }}</span>
+      </a>
+
+      <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+
+      <div id="navigation" class="hidden md:block">
+        <ul class="md:flex md:items-center md:gap-8">
+          {{ $currentPage := . }}
+          {{ range site.Menus.main }}
+            <li>
+              <a class="block py-2 text-base tracking-wide hover:text-primary transition-colors"
+                 {{if findRE `^http` .URL}}target="_blank" rel="noopener"{{end}}
+                 href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+
+    <div id="mobile-nav" class="md:hidden hidden pb-4 border-t border-slate-200 dark:border-slate-700 mt-4 pt-4">
+      <ul class="flex flex-col gap-2">
+        {{ range site.Menus.main }}
+          <li>
+            <a class="block py-3 px-2 text-base tracking-wide text-slate-700 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-all duration-200"
+               {{if findRE `^http` .URL}}target="_blank" rel="noopener"{{end}}
+               href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</header>

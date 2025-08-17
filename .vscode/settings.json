@@ -1,9 +1,16 @@
 {
-    "search.exclude": {
-      "**/theme": true
-    },
-    "files.exclude": {
-      "**/theme": true
-    }
+  "search.exclude": {
+    "**/theme": true
+  },
+  "files.exclude": {
+    "**/theme": true
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore"
+  ,
+  "postcss.validate": false,
+  "files.associations": {
+    "*.css": "css"
   }
-  
+}

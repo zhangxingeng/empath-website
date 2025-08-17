@@ -1,0 +1,10 @@
+{{/* 
+  This bg-image.html partial has been added to fix missing partial error.
+  It handles background images for sections.
+*/}}
+
+{{ $src := .Src }}
+
+{{ if $src }}
+  style="background-image: url('{{ $src | absURL }}');"
+{{ end }} 

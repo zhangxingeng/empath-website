@@ -1,0 +1,84 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.team.team.enable }}
+{{ with $data.team.team }}
+{{"<!-- Team Section -->" | safeHTML}}
+<section id="team" class="section py-20 bg-white dark:bg-slate-900">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      
+      {{"<!-- Section Title -->" | safeHTML}}
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white mb-4">
+          {{ with .title }}
+            {{ $words := split . " " }}
+            {{ $lastIndex := sub (len $words) 1 }}
+            
+            {{ range $index, $word := $words }}
+              {{ if eq $index $lastIndex }}
+                <span class="text-primary">{{ $word }}</span>
+              {{ else }}
+                {{ $word }}
+              {{ end }}
+              {{ if ne $index $lastIndex }} {{ end }}
+            {{ end }}
+          {{ end }}
+        </h2>
+        <div class="mx-auto h-1 w-16 bg-primary rounded"></div>
+      </div>
+      {{"<!-- /Section Title -->" | safeHTML}}
+
+      {{"<!-- Team Members Grid -->" | safeHTML}}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        {{ range .team_member}}
+        {{"<!-- Team Member Card -->" | safeHTML}}
+        <div class="group">
+          <div class="bg-slate-50 dark:bg-slate-800 rounded shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 hover:-translate-y-2">
+            
+            {{"<!-- Member Photo -->" | safeHTML}}
+            <div class="relative">
+              <img src="{{ .image | absURL }}" 
+                   alt="{{ .name }}" 
+                   class="w-full h-80 object-cover object-center">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              
+              {{"<!-- Social Links Overlay -->" | safeHTML}}
+              <div class="absolute bottom-4 left-4 right-4">
+                <div class="flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {{ range .social }}
+                  <a href="{{ .link | safeURL }}" 
+                     aria-label="{{ .icon }}" 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="w-10 h-10 bg-white/90 hover:bg-white rounded flex items-center justify-center text-slate-700 hover:text-primary transition-all duration-300 hover:scale-110">
+                    <i class="{{ .icon }}"></i>
+                  </a>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+
+            {{"<!-- Member Info -->" | safeHTML}}
+            <div class="p-8">
+              <h4 class="text-xl font-serif font-semibold text-slate-900 dark:text-white mb-2">
+                {{ .name }}
+              </h4>
+              <span class="text-primary font-medium text-sm uppercase tracking-wide mb-4 block">
+                {{ .designation | markdownify }}
+              </span>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+                {{ .content | markdownify }}
+              </p>
+            </div>
+          </div>
+        </div>
+        {{"<!-- /Team Member Card -->" | safeHTML}}
+        {{ end }}
+      </div>
+      {{"<!-- /Team Members Grid -->" | safeHTML}}
+    </div>
+  </div>
+</section>
+{{"<!-- /Team Section -->" | safeHTML}}
+{{ end }}
+{{ end }}

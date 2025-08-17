@@ -1,0 +1,62 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.about.about.enable }}
+{{ with $data.about.about }}
+{{"<!-- About Section -->" | safeHTML}}
+<section class="about section py-20 bg-slate-50 dark:bg-slate-900" id="about">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      {{"<!-- Section Title -->" | safeHTML}}
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white mb-4">
+          {{ with .title }}
+            {{ $words := split . " " }}
+            {{ $lastIndex := sub (len $words) 1 }}
+            
+            {{ range $index, $word := $words }}
+              {{ if eq $index $lastIndex }}
+                <span class="text-primary">{{ $word }}</span>
+              {{ else }}
+                {{ $word }}
+              {{ end }}
+              {{ if ne $index $lastIndex }} {{ end }}
+            {{ end }}
+          {{ end }}
+        </h2>
+        <div class="mx-auto h-1 w-16 bg-primary rounded"></div>
+      </div>
+      {{"<!-- /Section Title -->" | safeHTML}}
+
+      {{"<!-- About Items Grid -->" | safeHTML}}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{ range .about_item }}
+        <div class="group">
+          <div class="bg-white dark:bg-slate-800 rounded shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full border border-slate-200 dark:border-slate-700 hover:-translate-y-2">
+            {{"<!-- Icon -->" | safeHTML}}
+            <div class="flex justify-center mb-6">
+              <div class="w-16 h-16 bg-primary/10 rounded flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                {{ with .icon }}
+                <i class="{{ . }} text-2xl text-primary"></i>
+                {{ end }}
+              </div>
+            </div>
+            
+            {{"<!-- Content -->" | safeHTML}}
+            <div class="text-center">
+              <h3 class="text-xl font-serif font-semibold text-slate-900 dark:text-white mb-4">
+                {{ .title }}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                {{ .content | markdownify }}
+              </p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{"<!-- /About Items Grid -->" | safeHTML}}
+    </div>
+  </div>
+</section>
+{{"<!-- /About Section -->" | safeHTML}}
+{{ end }}
+{{ end }}

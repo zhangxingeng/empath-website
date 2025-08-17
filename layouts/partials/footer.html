@@ -1,0 +1,95 @@
+{{"<!-- Footer -->" | safeHTML}}
+<footer id="footer" class="py-16 bg-slate-900 dark:bg-slate-950 border-t border-slate-700">
+	<div class="container mx-auto px-4">
+		<div class="max-w-4xl mx-auto text-center">
+
+			{{"<!-- Logo -->" | safeHTML}}
+			<div class="mb-8">
+				<a href="{{ site.Home.Permalink }}" aria-label="Home" class="inline-flex items-center justify-center gap-3">
+					{{ if site.Params.logo }}
+					<img src="{{ site.Params.logo | absURL }}" 
+						 alt="{{ site.Title }}" 
+						 class="h-14 w-auto dark:hidden">
+					<img src="{{ site.Params.logo_dark | absURL }}" 
+						 alt="{{ site.Title }}" 
+						 class="h-14 w-auto hidden dark:block">
+					{{ end }}
+					<span class="font-serif text-2xl font-semibold text-white">{{ site.Title }}</span>
+				</a>
+			</div>
+
+			{{"<!-- Social Links -->" | safeHTML}}
+			<div class="mb-8">
+				<ul class="flex items-center justify-center gap-6">
+					<li>
+						<a href="https://linkedin.com/company/empath-legal" 
+						   aria-label="LinkedIn" 
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   class="w-12 h-12 bg-slate-800 hover:bg-primary rounded flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+							<i class="ti-linkedin text-lg"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/empathlegal" 
+						   aria-label="Twitter" 
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   class="w-12 h-12 bg-slate-800 hover:bg-primary rounded flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+							<i class="ti-twitter-alt text-lg"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			{{"<!-- Copyright -->" | safeHTML}}
+			<div class="border-t border-slate-700 pt-8">
+				<p class="text-slate-400">{{ site.Params.copyright | markdownify }}</p>
+			</div>
+		</div>
+	</div>
+</footer>
+{{"<!-- /Footer -->" | safeHTML}}
+
+{{ "<!-- Google Map API -->" | safeHTML }}
+{{ if site.Params.map.enable }}
+<script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
+{{ end }}
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+
+<!-- cookie -->
+{{ if site.Params.cookies.enable }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-700 p-4 text-center text-white transition-all duration-300 translate-y-full invisible">
+	<div class="container mx-auto max-w-4xl">
+		<p class="text-sm text-slate-300 mb-4">This site uses cookies to enhance your experience. By continuing to use this website, you agree to their use.</p>
+		<button id="js-cookie-button" class="btn bg-primary hover:bg-accent text-white px-6 py-2 text-sm font-medium transition-all duration-300">
+			I Accept
+		</button>
+	</div>
+</div>
+<script>
+  (function() {
+    var cookieBox = document.getElementById('js-cookie-box');
+    var cookieButton = document.getElementById('js-cookie-button');
+    if (!cookieBox || !cookieButton || typeof Cookies === 'undefined') return;
+    if (!Cookies.get('cookie-box')) {
+      cookieBox.classList.remove('translate-y-full', 'invisible');
+      cookieBox.classList.add('translate-y-0', 'visible');
+      cookieButton.addEventListener('click', function() {
+        Cookies.set('cookie-box', true, { expires: 30 });
+        cookieBox.classList.remove('translate-y-0', 'visible');
+        cookieBox.classList.add('translate-y-full', 'invisible');
+      });
+    }
+  })();
+</script>
+{{ end }}

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+
+  --color-primary: #3c66a0; /* primary-blue */
+  --color-accent: #305693; /* highlight-blue */
+  --color-accent-2: #274978; /* accent-blue */
+}
+
+@theme dark {
+  --color-bg: #0c1526; /* darkest-blue */
+  --color-surface: #132036; /* dark-blue */
+  --color-text: #ffffff;
+  --color-muted: #e6e6e6; /* light-text */
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-bg text-text font-sans antialiased text-[15px] leading-7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-semibold text-slate-900 dark:text-white tracking-wide mb-5;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  p {
+    @apply text-muted dark:text-slate-200 mb-5;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-24 md:py-20 sm:py-14;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 font-medium text-sm uppercase tracking-wider transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded;
+  }
+  .btn-transparent {
+    @apply border-2 border-white/80 bg-transparent text-white hover:bg-white hover:text-slate-900 hover:border-white focus:ring-white/50;
+  }
+  .btn-main {
+    @apply bg-primary text-white hover:bg-accent border-2 border-primary hover:border-accent focus:ring-primary/50;
+  }
+  .btn-block {
+    @apply w-full;
+  }
+
+  .button-group {
+    @apply flex justify-center gap-5 mt-7;
+  }
+
+  .hero-area {
+    @apply relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
+  }
+  .hero-area .block {
+    @apply relative z-10 text-center;
+  }
+  .hero-area .block h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight;
+  }
+  .hero-area .block p {
+    @apply text-xl md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed;
+  }
+
+  /* Team member styles now handled directly in templates with Tailwind classes */
+
+  /* About block styles now handled directly in templates with Tailwind classes */
+
+  /* Feature styles now handled directly in templates with Tailwind classes */
+
+  .form-control {
+    @apply rounded h-[50px] p-4 mb-5 bg-white/5 border border-white/15 text-white text-sm focus:bg-white/10 focus:border-primary focus:outline-none;
+  }
+  textarea.form-control {
+    @apply h-[150px];
+  }
+
+  /* Footer styles now handled directly in template with Tailwind classes */
+}
+
+/* Minimal CSS to support Hugo templates - keeping this section for any future dynamic needs */

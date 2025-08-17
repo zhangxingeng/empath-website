@@ -1,7 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "https://empathlegal.com/"
 title = "Empath Legal"
-theme = "meghna-hugo"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
 # post pagination
@@ -32,6 +31,22 @@ target = '(css|styles|scss|sass)'
 [[build.cachebusters]]
 source = 'assets/.*\.(.*)$'
 target = '$1'
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = 'css'
+
+############################# Modules ##############################
+[module]
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+[[module.mounts]]
+disableWatch = true
+source = 'hugo_stats.json'
+target = 'assets/notwatching/hugo_stats.json'
 
 ############################# Outputs ##############################
 [outputs]
@@ -60,33 +75,16 @@ maxAge = "720h"
 unsafe = true
 
 ############################# Plugins ##########################
+# Keep only what we actually use alongside Tailwind
 # css plugins
 [[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
-[[params.plugins.css]]
 link = "plugins/themify-icons/themify-icons.css"
-[[params.plugins.css]]
-link = "plugins/magnific-popup/magnific-popup.css"
-[[params.plugins.css]]
-link = "plugins/slick/slick.css"
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700&display=swap"
 
 # js plugins
 [[params.plugins.js]]
-link = "plugins/jquery/jquery.min.js"
-[[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
-[[params.plugins.js]]
-link = "plugins/slick/slick.min.js"
-[[params.plugins.js]]
-link = "plugins/shuffle/shuffle.min.js"
-[[params.plugins.js]]
-link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
-[[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
-[[params.plugins.js]]
-link = "plugins/google-map/map.js"
 
 ################### English Navigation ########################
 
@@ -96,14 +94,9 @@ url = "#about"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "Features"
-url = "#feature"
+name = "FAQ"
+url = "/faq"
 weight = 3
-
-[[Languages.en.menu.main]]
-name = "Team"
-url = "#team"
-weight = 4
 
 [[Languages.en.menu.main]]
 name = "Contact"
@@ -112,7 +105,8 @@ weight = 5
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "images/favicon.svg"
+logo_dark = "images/favicon-dark.svg"
 # Meta data
 description = "AI-powered juror insights for legal professionals"
 author = "Empath Legal"
@@ -120,11 +114,17 @@ author = "Empath Legal"
 google_analytics_id = "G-CFEY06D568" # Your ID
 # post share
 post_share = true
+# copyright
+copyright = "Copyright &copy; 2024 Empath Legal LLC"
+
+# Tailwind color mode (opt-in)
+[params.tailwind]
+dark_mode = true
 
 # preloader
 [params.preloader]
 enable = true
-preloader = "images/logo.png"
+preloader = "images/favicon.svg"
 
 # cookies
 [params.cookies]

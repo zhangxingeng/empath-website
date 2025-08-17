@@ -1,0 +1,65 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.feature.feature.enable }}
+{{ with $data.feature.feature }}
+{{"<!-- Main Feature Section -->" | safeHTML}}
+<section class="section py-20 bg-slate-900 dark:bg-slate-950" id="feature">
+  <div class="container mx-auto px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        {{"<!-- Feature Image -->" | safeHTML}}
+        <div class="order-2 lg:order-1">
+          <div class="relative">
+            <img src="{{ .image | absURL }}" 
+                 alt="{{ .title }}" 
+                 class="w-full h-auto rounded shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent rounded"></div>
+          </div>
+        </div>
+
+        {{"<!-- Feature Content -->" | safeHTML}}
+        <div class="order-1 lg:order-2">
+          <div class="lg:pl-8">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+              {{ .content | markdownify }}
+            </p>
+
+            {{"<!-- Feature Items Grid -->" | safeHTML}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {{ range .feature_item }}
+              <div class="group">
+                <div class="flex items-start space-x-4">
+                  {{"<!-- Icon -->" | safeHTML}}
+                  {{ with .icon }}
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary/20 rounded flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                    <i class="{{ . }} text-xl text-primary"></i>
+                  </div>
+                  {{ end }}
+                  
+                  {{"<!-- Content -->" | safeHTML}}
+                  <div>
+                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+                      {{ .title | markdownify }}
+                    </h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                      {{ .content | markdownify }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+            {{"<!-- /Feature Items Grid -->" | safeHTML}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /Main Feature Section -->" | safeHTML}}
+{{ end }}
+{{ end }}

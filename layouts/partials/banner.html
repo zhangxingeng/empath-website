@@ -1,0 +1,63 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.banner.banner.enable }}
+{{ with $data.banner.banner }}
+{{"<!-- Hero Section -->" | safeHTML}}
+
+<section class="relative min-h-screen flex items-center justify-center bg-fixed" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ .bg_image | absURL }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  {{ partial "image" (dict "Src" .bg_image "Alt" .Title "Class" "hidden") }}
+  
+  <div class="container mx-auto px-4 relative z-20">
+    <div class="flex justify-center">
+      <div class="w-full max-w-5xl text-center">
+        <div class="text-white">
+          {{ if .icon }}
+          <div class="mb-6">
+            <i class="{{ .icon }} text-5xl text-white"></i>
+          </div>
+          {{ end }}
+          
+          <!-- Logo -->
+          <div class="mb-8">
+            {{ if site.Params.logo_dark }}
+            <img src="{{ site.Params.logo_dark | absURL }}" 
+                 alt="{{ site.Title }}" 
+                 class="h-20 w-auto mx-auto mb-4">
+            {{ end }}
+          </div>
+          
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+            {{ .title | markdownify }}
+          </h1>
+          
+          <p class="text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto mb-12 leading-relaxed">
+            {{ .content | markdownify }}
+          </p>
+          
+          {{ if isset . "buttons" }}
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            {{ range .buttons }}
+            <a href="{{ .link }}" 
+               class="btn {{ if eq .link "#demo" }}btn-main{{ else }}{{ .class }}{{ end }} px-8 py-4 text-lg font-medium rounded transition-all duration-300 transform hover:scale-105" 
+               {{ if eq .link "#demo" }}data-scroll{{ end }} 
+               aria-label="{{ .label }}">
+              {{ .label }}
+            </a>
+            {{ end }}
+          </div>
+          {{ else if .button.enable }} 
+          {{ with .button }}
+          <a href="{{ .link }}" 
+             class="btn btn-transparent page-scroll px-8 py-4 text-lg font-medium rounded transition-all duration-300 transform hover:scale-105" 
+             aria-label="{{ .label }}">
+            {{ .label }}
+          </a>
+          {{ end }} 
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /Hero Section -->" | safeHTML}}
+{{ end }}
+{{ end }}
